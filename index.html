@@ -25,6 +25,23 @@
     height: 30%; 
     object-fit: contain;
 }
+           table, th, td {
+    border: 2px solid black;
+    border-radius: 10px
+}
+          tr:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+}
+
+th:nth-child(even),td:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+}
+    #ip1 {
+    border-radius: 18px;
+    padding: 20px; 
+    width: 200px;
+    height: 15px;    
+}
         </style> 
     </head>
 
@@ -217,10 +234,48 @@ href="#team">Meet the Team</a></li>
                         R Square is calculated by the sum of squared of prediction error divided by the total sum of the square which replaces the calculated prediction with mean. R Square value is between 0 to 1 and a bigger value indicates a better fit between prediction and actual value. Imagine you draw a horizontal line through all the values such that the total deviation is minimized. Now we compare that sum to the sum of the total distance to our calculated line and subtract the quotient of these two values from 1. If our line predicts the values far better than the horizontal line the subtractive should be small and our R² value close to 1.
                      <br><img class = "r2" src = "r.png" />
                        
-                      </ul>
+                     </ul>
                        <p class="lead"> Final Results</p>
                       <ul>Following shoes the results for the models implemented: <br>
-                        <img class='r2' src = "ss.png" /></ul>
+                       
+                        <b>
+                          Evaluation Results:</b><br>
+                      <table style = "width: 120%">
+                        <tr>
+                        <th>Metrics <br></th>
+                        <th>Linear Regression (LR)</th>
+                        <th>Decsion Tree Regressor (LR)</th>
+                        <th>Random Forest Regressor (RF)</th>
+                   
+                          </tr>
+                        <tr>
+                          <td>R^2Metric</td>
+                          <td>0.962</td>
+                          <td>0.989</td>
+                          <td>0.995</td>
+                        
+                        <tr>
+                          
+                          <td>MAE</td>
+                          <td>4929</td>
+                          <td>1338</td>
+                          <td>1762</td>
+                          
+                        <tr>
+                          
+                          <td>MSE*10^7</td>
+                          <td>5.4</td>
+                          <td>0.6</td>
+                          <td>1.1</td>
+                          
+                        <tr>
+                          
+                          <td>Accuracy</td>
+                          <td>94%</td>
+                          <td>98%</td>
+                          <td>99%</td>  
+                          
+                        </table></ul>
                     </div>
                 </div>
             </div>
